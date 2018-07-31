@@ -1,0 +1,119 @@
+.w-full {
+    width: 100%;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.vw-full {
+    width: 100vw;
+}
+
+.vh-full {
+    height: 100vh;
+}
+
+.mw-full {
+    max-width: 100%;
+}
+
+.mh-full {
+    max-height: 100%;
+}
+
+.vw-full {
+    width: 100vw;
+}
+
+.vh-full {
+    height: 100vh;
+}
+
+.w-auto {
+    width: auto;
+}
+
+.h-auto {
+    height: auto;
+}
+
+@each $bp, $size in $breakpoints {
+    @media (min-width: $size) {
+
+        .w-full-#{$bp} {
+            width: 100%;
+        }
+
+        .h-full-#{$bp} {
+            height: 100%;
+        }
+
+        .mw-full-#{$bp} {
+            max-width: 100%;
+        }
+
+        .mh-full-#{$bp} {
+            max-height: 100%;
+        }
+
+        .vw-full-#{$bp} {
+            width: 100vw;
+        }
+
+        .vh-full-#{$bp} {
+            height: 100vh;
+        }
+
+        .w-auto-#{$bp} {
+            width: auto;
+        }
+
+        .h-auto-#{$bp} {
+            height: auto;
+        }
+
+    }
+}
+
+@each $i in $steps {
+
+    .w-#{$i} {
+        width: rem($i);
+    }
+
+    .h-#{$i} {
+        height: rem($i);
+    }
+
+    .mw-#{$i} {
+        max-width: rem($i);
+    }
+
+    .mh-#{$i} {
+        max-height: rem($i);
+    }
+
+    @each $bp, $size in $breakpoints {
+        @media (min-width: $size) {
+
+            .w-#{$i}-#{$bp} {
+                width: rem($i);
+            }
+
+            .h-#{$i}-#{$bp} {
+                height: rem($i);
+            }
+
+            .mw-#{$i}-#{$bp} {
+                max-width: rem($i);
+            }
+
+            .mh-#{$i}-#{$bp} {
+                max-width: rem($i);
+            }
+
+        }
+    }
+
+}

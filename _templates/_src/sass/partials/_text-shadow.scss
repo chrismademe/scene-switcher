@@ -1,0 +1,55 @@
+.t-shadow-1,
+.t-shadow-1-h:hover {
+    text-shadow: 0 0 .4rem rgba(black, .3);
+}
+
+.t-shadow-2,
+.t-shadow-2-h:hover {
+    text-shadow: 0 0 .8rem rgba(black, .3);
+}
+
+.t-shadow-3,
+.t-shadow-3-h:hover {
+    text-shadow: .1rem .1rem 1.4rem rgba(black, .3);
+}
+
+.t-shadow-4,
+.t-shadow-4-h:hover {
+    text-shadow: .2rem .3rem 2rem rgba(black, .3);
+}
+
+.t-shadow-5,
+.t-shadow-5-h:hover {
+    text-shadow: .4rem .5rem 2.8rem rgba(black, .3);
+}
+
+@each $bp, $size in $breakpoints {
+    @media (min-width: $size) {
+
+        .t-shadow-1-#{$bp},
+        .t-shadow-1-#{$bp}-h:hover {
+            text-shadow: 0 0 .4rem rgba(black, .3);
+        }
+
+        .t-shadow-2-#{$bp},
+        .t-shadow-2-#{$bp}-h:hover {
+            text-shadow: 0 0 .8rem rgba(black, .3);
+        }
+
+        .t-shadow-3-#{$bp},
+        .t-shadow-3-#{$bp}-h:hover {
+            text-shadow: .1rem .1rem 1.4rem rgba(black, .3);
+        }
+
+        .t-shadow-4-#{$bp},
+        .t-shadow-4-#{$bp}-h:hover {
+            text-shadow: .2rem .3rem 2rem rgba(black, .3);
+        }
+
+        .t-shadow-5-#{$bp},
+        .t-shadow-5-#{$bp}-h:hover {
+            text-shadow: .4rem .5rem 2.8rem rgba(black, .3);
+        }
+
+    }
+}

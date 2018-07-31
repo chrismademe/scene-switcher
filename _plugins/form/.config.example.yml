@@ -1,0 +1,75 @@
+# Forms
+forms:
+    quick:
+
+        # Form name
+        name: Quick Enquiry
+
+        # Send an email?
+        email: true
+
+        # Save to a database?
+        #
+        # @NOTE This option requires you to have 'db'
+        # defined in your config with connection details
+        db: true
+
+        # Should the form send an autoresponse?
+        # @REQUIRES email
+        autoresponder: true
+
+        # Email recipient
+        recipient: chris@resknow.co.uk
+
+        # Email subject
+        subject: New Message From Your Website
+
+        # Email autoresponse subject
+        subject_autoresponder: Thank you for contacting Web Design Croydon
+
+        # The message shown on success
+        # @NOTE Only shown if location is not set.
+        success_message: Thank you. Your message has been sent.
+
+        # Where to redirect the user on success
+        location: /contact/thanks
+
+        # Form fields
+        fields:
+
+            # Form name (used in HTML input)
+            name:
+
+                # Label
+                label: Name
+
+                # HTML type
+                type: text
+
+                # Validation rules
+                validate: required
+
+                # Filter rules
+                filter: trim|sanitize_string
+
+                # For Validation and Filter
+                # See wixel/gump
+
+            email:
+                label: E-mail address
+                type: email
+                placeholder: E-mail address
+                validate: required|valid_email
+                filter: trim
+            phone:
+                label: Phone number
+                type: tel
+                placeholder: Phone number
+                validate: required
+                filter: trim|sanitize_string
+            message:
+                label: Message
+                type: textarea
+                placeholder: Enter your message
+                validate: required
+                filter: trim|sanitize_string

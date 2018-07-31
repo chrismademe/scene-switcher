@@ -1,0 +1,43 @@
+@each $key, $colour in $colours {
+    .c-#{$key} {
+        color: $colour;
+
+        &-h:hover {
+            color: $colour;
+        }
+    }
+
+    @for $i from 1 through 10 {
+        .c-#{$key}-#{$i} {
+            color: rgba($colour, ($i / 10));
+
+            &-h:hover {
+                color: $colour;
+            }
+        }
+    }
+
+    @each $bp, $size in $breakpoints {
+        @media (min-width: $size) {
+
+            .c-#{$key}-#{$bp} {
+                color: $colour;
+
+                &-h:hover {
+                    color: $colour;
+                }
+            }
+
+            @for $i from 1 through 10 {
+                .c-#{$key}-#{$i}-#{$bp} {
+                    color: rgba($colour, ($i / 10));
+
+                    &-h:hover {
+                        color: $colour;
+                    }
+                }
+            }
+
+        }
+    }
+}

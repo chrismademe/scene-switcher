@@ -1,0 +1,10 @@
+/**
+ * REM
+ *
+ * Convert Pixel units to REM, assuming
+ * 10px = 1rem
+ * @param $px PX value
+ */
+@function rem( $px ) {
+    @return #{$px}px;
+}

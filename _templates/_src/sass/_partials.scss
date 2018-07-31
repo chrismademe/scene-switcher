@@ -1,0 +1,27 @@
+@import "config";
+
+@import "functions/color",
+        "functions/rem";
+
+@import "partials/background",
+        "partials/border",
+        "partials/box-shadow",
+        "partials/colour",
+        "partials/container",
+        "partials/display",
+        "partials/font-size",
+        "partials/font-weight",
+        "partials/grid",
+        "partials/margin",
+        "partials/padding",
+        "partials/position",
+        "partials/text-align",
+        "partials/text-shadow",
+        "partials/typography",
+        "partials/width",
+        "partials/z-index";
+
+@import "vendor/fontawesome/fontawesome",
+        "vendor/fontawesome/fa-brands",
+        "vendor/fontawesome/fa-solid",
+        "vendor/fontawesome/fa-regular";

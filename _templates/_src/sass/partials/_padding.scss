@@ -1,0 +1,71 @@
+@each $i in $steps {
+
+    .px-#{$i} {
+        padding-left: rem($i);
+        padding-right: rem($i);
+    }
+
+    .py-#{$i} {
+        padding-top: rem($i);
+        padding-bottom: rem($i);
+    }
+
+    .pt-#{$i} {
+        padding-top: rem($i);
+    }
+
+    .pb-#{$i} {
+        padding-bottom: rem($i);
+    }
+
+    .pl-#{$i} {
+        padding-left: rem($i);
+    }
+
+    .pr-#{$i} {
+        padding-right: rem($i);
+    }
+
+    .p-#{$i} {
+        padding: rem($i);
+    }
+
+}
+
+@each $bp, $size in $breakpoints {
+    @media (min-width: $size) {
+        @each $i in $steps {
+
+            .px-#{$i}-#{$bp} {
+                padding-left: rem($i);
+                padding-right: rem($i);
+            }
+
+            .py-#{$i}-#{$bp} {
+                padding-top: rem($i);
+                padding-bottom: rem($i);
+            }
+
+            .pt-#{$i}-#{$bp} {
+                padding-top: rem($i);
+            }
+
+            .pb-#{$i}-#{$bp} {
+                padding-bottom: rem($i);
+            }
+
+            .pl-#{$i}-#{$bp} {
+                padding-left: rem($i);
+            }
+
+            .pr-#{$i}-#{$bp} {
+                padding-right: rem($i);
+            }
+
+            .p-#{$i}-#{$bp} {
+                padding: rem($i);
+            }
+
+        }
+    }
+}

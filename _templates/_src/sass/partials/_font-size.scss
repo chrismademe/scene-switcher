@@ -1,0 +1,15 @@
+@each $i in $steps {
+    .fs-#{$i} {
+        font-size: rem($i);
+    }
+
+    @each $bp, $size in $breakpoints {
+        @media (min-width: $size) {
+    
+            .fs-#{$i}-#{$bp} {
+                font-size: rem($i);
+            }
+
+        }
+    }
+}

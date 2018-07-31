@@ -1,0 +1,92 @@
+# WordPress API Settings
+wprest:
+    base_uri: https://cms.resknow.net/projects/wp-json
+
+# Site Config
+#
+# You can find all of this information
+# on the CRM.
+url: http://boilerplate.dev
+company: Boilerplate
+
+# Include keywords here as they'll
+# be the same throughout the site.
+keywords: keywords, go, here
+
+# Stylesheets
+stylesheets:
+    main-css: ~/css/style.css
+    scene-switcher: ~/css/scene-switcher.css
+
+# Javascript
+scripts:
+    twitch-player-embed: //player.twitch.tv/js/embed/v1.js
+    main-js: ~/js/switcher.js
+
+# Environment
+# @NOTE Set this to 'prod' when putting
+# the site live.
+environment: dev
+
+# Forms
+forms:
+    quick:
+
+        # Form name
+        name: Quick Enquiry
+
+        # Send an email?
+        email: true
+
+        # Save to a database?
+        #
+        # @NOTE This option requires you to have 'db'
+        # defined in your config with connection details
+        #
+        # Also import database-table.sql from the plugin
+        # folder :)
+        db: false
+
+        # Should the form send an autoresponse?
+        # @REQUIRES email
+        autoresponder: true
+
+        # Email recipient
+        recipient: chris@resknow.co.uk
+
+        # Email subject
+        subject: New Message From Your Website
+
+        # Email autoresponse subject
+        subject_autoresponder: Thank you for your email.
+
+        # The message shown on success
+        # @NOTE Only shown if location is not set.
+        success_message: Thank you. Your message has been sent.
+
+        # Where to redirect the user on success (optional)
+        #location: /contact/thanks
+
+        # Form fields
+        fields:
+            name:
+                label: Name
+                type: text
+                validate: required
+                filter: trim|sanitize_string
+            phone:
+                label: Phone
+                type: text
+                validate: required
+                filter: trim|sanitize_string
+            message:
+                label: Message
+                type: textarea
+                placeholder: Enter your message
+                validate: required
+                filter: trim|sanitize_string
+            gdpr-consent:
+                label: Consent
+                type: checkbox
+                validate: required
+                filter: trim|sanitize_string

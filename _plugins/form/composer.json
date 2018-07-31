@@ -1,0 +1,7 @@
+{
+    "require": {
+        "wixel/gump": "^1.5",
+        "phpmailer/phpmailer": "^6.0",
+        "catfan/medoo": "^1.4"
+    }
+}

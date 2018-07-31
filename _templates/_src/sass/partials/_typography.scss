@@ -1,0 +1,45 @@
+.truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
+@each $i in $scale {
+    .ls-#{$i} {
+        letter-spacing: rem($i);
+    }
+}
+
+@each $bp, $size in $breakpoints {
+    @media (min-width: $size) {
+
+        .truncate-#{$bp} {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .uppercase-#{$bp} {
+            text-transform: uppercase;
+        }
+
+        .lowercase-#{$bp} {
+            text-transform: lowercase;
+        }
+
+        @each $i in $scale {
+            .ls-#{$i}-#{$bp} {
+                letter-spacing: rem($i);
+            }
+        }
+
+    }
+}

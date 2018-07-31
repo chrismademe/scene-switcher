@@ -1,0 +1,19 @@
+# After you commit for the first time; change the "git ftp init"
+# command to "git ftp push" otherwise any future uploads will
+# fail!
+#
+#
+# Docker Image
+image: samueldebruyn/debian-git
+
+# Commands
+pipelines:
+  default:
+      - step:
+          script:
+              - apt-get update # Update the app repo on the Docker machine
+              - apt-get -qq install git-ftp # Install GIT FTP
+              - git ftp init --user $FTP_USERNAME --passwd $FTP_PASSWORD $FTP_HOST # Upload the site
+
+# Pipeline failing after the first upload?
+# Make sure the last command above is "git ftp push" instead of "git ftp init".

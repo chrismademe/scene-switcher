@@ -1,0 +1,89 @@
+/**
+ * Display
+ */
+
+.dn {
+    display: none;
+}
+
+.db {
+    display: block;
+}
+
+.dib {
+    display: inline-block;
+}
+
+.df {
+    display: flex;
+}
+
+.dif {
+    display: inline-flex;
+}
+
+.dg {
+    display: grid;
+}
+
+.dig {
+    display: inline-grid;
+}
+
+.dli {
+    display: list-item;
+}
+
+.ai-center {
+    align-items: center;
+}
+
+.jc-center {
+    justify-content: center;
+}
+
+@each $bp, $size in $breakpoints {
+    @media (min-width: $size) {
+
+        .dn-#{$bp} {
+            display: none;
+        }
+
+        .db-#{$bp} {
+            display: block;
+        }
+
+        .dib-#{$bp} {
+            display: inline-block;
+        }
+
+        .df-#{$bp} {
+            display: flex;
+        }
+
+        .dif-#{$bp} {
+            display: inline-flex;
+        }
+
+        .dg-#{$bp} {
+            display: grid;
+        }
+
+        .dig-#{$bp} {
+            display: inline-grid;
+        }
+
+        .dli-#{$bp} {
+            display: list-item;
+        }
+
+        .al-center-#{$bp} {
+            align-items: center;
+        }
+
+        .jc-center-#{$bp} {
+            justify-content: center;
+        }
+
+    }
+}

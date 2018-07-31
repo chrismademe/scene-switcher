@@ -1,0 +1,55 @@
+.shadow-1,
+.shadow-1-h:hover {
+    box-shadow: 0 0 .4rem rgba(black, .3);
+}
+
+.shadow-2,
+.shadow-2-h:hover {
+    box-shadow: 0 0 .8rem rgba(black, .3);
+}
+
+.shadow-3,
+.shadow-3-h:hover {
+    box-shadow: .1rem .1rem 1.4rem rgba(black, .3);
+}
+
+.shadow-4,
+.shadow-4-h:hover {
+    box-shadow: .2rem .3rem 2rem rgba(black, .3);
+}
+
+.shadow-5,
+.shadow-5-h:hover {
+    box-shadow: .4rem .5rem 2.8rem rgba(black, .3);
+}
+
+@each $bp, $size in $breakpoints {
+    @media (min-width: $size) {
+
+        .shadow-1-#{$bp},
+        .shadow-1-#{$bp}-h:hover {
+            box-shadow: 0 0 .4rem rgba(black, .3);
+        }
+
+        .shadow-2-#{$bp},
+        .shadow-2-#{$bp}-h:hover {
+            box-shadow: 0 0 .8rem rgba(black, .3);
+        }
+
+        .shadow-3-#{$bp},
+        .shadow-3-#{$bp}-h:hover {
+            box-shadow: .1rem .1rem 1.4rem rgba(black, .3);
+        }
+
+        .shadow-4-#{$bp},
+        .shadow-4-#{$bp}-h:hover {
+            box-shadow: .2rem .3rem 2rem rgba(black, .3);
+        }
+
+        .shadow-5-#{$bp},
+        .shadow-5-#{$bp}-h:hover {
+            box-shadow: .4rem .5rem 2.8rem rgba(black, .3);
+        }
+
+    }
+}

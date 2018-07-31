@@ -1,0 +1,205 @@
+// Width
+@each $i in $scale {
+
+    .bw-#{$i} {
+        border-width: rem($i);
+    }
+
+    .bwt-#{$i} {
+        border-top-width: rem($i);
+    }
+
+    .bwb-#{$i} {
+        border-bottom-width: rem($i);
+    }
+
+    .bwl-#{$i} {
+        border-left-width: rem($i);
+    }
+
+    .bwr-#{$i} {
+        border-right-width: rem($i);
+    }
+
+    .bwx-#{$i} {
+        border-left-width: rem($i);
+        border-right-width: rem($i);
+    }
+
+    .bwy-#{$i} {
+        border-top-width: rem($i);
+        border-bottom-width: rem($i);
+    }
+
+}
+
+// Colours
+@each $key, $colour in $colours {
+    .bc-#{$key} {
+        border-color: $colour;
+    }
+}
+
+// Styles
+.bs {
+    border-style: solid;
+}
+
+.bd {
+    border-style: dotted;
+}
+
+.bda {
+    border-style: dashed;
+}
+
+// Radius
+@each $i in $scale {
+
+    .br-#{$i} {
+        border-radius: rem($i);
+    }
+
+    .brt-#{$i} {
+        border-top-left-radius: rem($i);
+        border-top-right-radius: rem($i);
+    }
+
+    .brb-#{$i} {
+        border-bottom-left-radius: rem($i);
+        border-bottom-right-radius: rem($i);
+    }
+
+    .brl-#{$i} {
+        border-top-left-radius: rem($i);
+        border-bottom-left-radius: rem($i);
+    }
+
+    .brr-#{$i} {
+        border-top-right-radius: rem($i);
+        border-bottom-right-radius: rem($i);
+    }
+
+    .brtl-#{$i} {
+        border-top-left-radius: rem($i);
+    }
+
+    .brtr-#{$i} {
+        border-top-right-radius: rem($i);
+    }
+
+    .brbl-#{$i} {
+        border-bottom-left-radius: rem($i);
+    }
+
+    .brbr-#{$i} {
+        border-bottom-right-radius: rem($i);
+    }
+
+}
+
+@each $bp, $size in $breakpoints {
+    @media (min-width: $size) {
+
+        // Width
+        @each $i in $scale {
+
+            .bw-#{$i}-#{$bp} {
+                border-width: rem($i);
+            }
+
+            .bwt-#{$i}-#{$bp} {
+                border-top-width: rem($i);
+            }
+
+            .bwb-#{$i}-#{$bp} {
+                border-bottom-width: rem($i);
+            }
+
+            .bwl-#{$i}-#{$bp} {
+                border-left-width: rem($i);
+            }
+
+            .bwr-#{$i}-#{$bp} {
+                border-right-width: rem($i);
+            }
+
+            .bwx-#{$i}-#{$bp} {
+                border-left-width: rem($i);
+                border-right-width: rem($i);
+            }
+
+            .bwy-#{$i}-#{$bp} {
+                border-top-width: rem($i);
+                border-bottom-width: rem($i);
+            }
+
+        }
+
+        // Colours
+        @each $key, $colour in $colours {
+            .bc-#{$key}-#{$bp} {
+                border-color: $colour;
+            }
+        }
+
+        // Styles
+        .bs-#{$bp} {
+            border-style: solid;
+        }
+
+        .bd-#{$bp} {
+            border-style: dotted;
+        }
+
+        .bda-#{$bp} {
+            border-style: dashed;
+        }
+
+        // Radius
+        @each $i in $scale {
+
+            .br-#{$i}-#{$bp} {
+                border-radius: rem($i);
+            }
+
+            .brt-#{$i}-#{$bp} {
+                border-top-left-radius: rem($i);
+                border-top-right-radius: rem($i);
+            }
+
+            .brb-#{$i}-#{$bp} {
+                border-bottom-left-radius: rem($i);
+                border-bottom-right-radius: rem($i);
+            }
+
+            .brl-#{$i}-#{$bp} {
+                border-top-left-radius: rem($i);
+                border-bottom-left-radius: rem($i);
+            }
+
+            .brr-#{$i}-#{$bp} {
+                border-top-right-radius: rem($i);
+                border-bottom-right-radius: rem($i);
+            }
+
+            .brtl-#{$i}-#{$bp} {
+                border-top-left-radius: rem($i);
+            }
+
+            .brtr-#{$i}-#{$bp} {
+                border-top-right-radius: rem($i);
+            }
+
+            .brbl-#{$i}-#{$bp} {
+                border-bottom-left-radius: rem($i);
+            }
+
+            .brbr-#{$i}-#{$bp} {
+                border-bottom-right-radius: rem($i);
+            }
+
+        }
+
+    }
+}

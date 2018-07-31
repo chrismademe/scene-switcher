@@ -1,0 +1,173 @@
+.absolute {
+    position: absolute;
+}
+
+.relative {
+    position: relative;
+}
+
+.static {
+    position: static;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.offscreen-l {
+    left: -120vw;
+}
+
+.offscreen-r {
+    right: -120vw;
+}
+
+.offscreen-t {
+    top: -120vh;
+}
+
+.offscreen-b {
+    bottom: -120vh;
+}
+
+.left-auto {
+    left: auto;
+}
+
+.right-auto {
+    right: auto;
+}
+
+.top-auto {
+    top: auto;
+}
+
+.bottom-auto {
+    bottom: auto;
+}
+
+@each $i in $steps {
+
+    .top-#{$i} {
+        top: rem($i);
+    }
+
+    .bottom-#{$i} {
+        bottom: rem($i);
+    }
+
+    .left-#{$i} {
+        left: rem($i);
+    }
+
+    .right-#{$i} {
+        right: rem($i);
+    }
+
+    .top-n-#{$i} {
+        top: rem(-#{$i});
+    }
+
+    .bottom-n-#{$i} {
+        bottom: rem(-#{$i});
+    }
+
+    .left-n-#{$i} {
+        left: rem(-#{$i});
+    }
+
+    .right-n-#{$i} {
+        right: rem(-#{$i});
+    }
+
+}
+
+@each $bp, $size in $breakpoints {
+    @media (min-width: $size) {
+
+        .absolute-#{$bp} {
+            position: absolute;
+        }
+
+        .relative-#{$bp} {
+            position: relative;
+        }
+
+        .static-#{$bp} {
+            position: static;
+        }
+
+        .fixed-#{$bp} {
+            position: fixed;
+        }
+
+        .offscreen-l-#{$bp} {
+            left: -120vw;
+        }
+
+        .offscreen-r-#{$bp} {
+            right: -120vw;
+        }
+
+        .offscreen-t-#{$bp} {
+            top: -120vh;
+        }
+
+        .offscreen-b-#{$bp} {
+            bottom: -120vh;
+        }
+
+        .left-auto-#{$bp} {
+            left: auto;
+        }
+
+        .right-auto-#{$bp} {
+            right: auto;
+        }
+
+        .top-auto-#{$bp} {
+            top: auto;
+        }
+
+        .bottom-auto-#{$bp} {
+            bottom: auto;
+        }
+
+        @each $i in $steps {
+
+            .top-#{$i}-#{$bp} {
+                top: rem($i);
+            }
+
+            .bottom-#{$i}-#{$bp} {
+                bottom: rem($i);
+            }
+
+            .left-#{$i}-#{$bp} {
+                left: rem($i);
+            }
+
+            .right-#{$i}-#{$bp} {
+                right: rem($i);
+            }
+
+            .top-n-#{$i}-#{$bp} {
+                top: rem(-#{$i});
+            }
+
+            .bottom-n-#{$i}-#{$bp} {
+                bottom: rem(-#{$i});
+            }
+
+            .left-n-#{$i}-#{$bp} {
+                left: rem(-#{$i});
+            }
+
+            .right-n-#{$i}-#{$bp} {
+                right: rem(-#{$i});
+            }
+
+        }
+
+    }
+}

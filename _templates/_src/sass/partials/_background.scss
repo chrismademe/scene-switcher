@@ -1,0 +1,87 @@
+.bgi-cover {
+    background-size: cover;
+}
+
+.bgi-contain {
+    background-size: contain;
+}
+
+.bgi-center {
+    background-position: center;
+}
+
+.bgc-transparent {
+    background-color: transparent;
+}
+
+.bgi {
+    background-image: var(--bgi);
+}
+
+@each $bp, $size in $breakpoints {
+    @media (min-width: $size) {
+
+        .bgi-cover-#{$bp} {
+            background-size: cover;
+        }
+
+        .bgi-contain-#{$bp} {
+            background-size: contain;
+        }
+
+        .bgi-center-#{$bp} {
+            background-position: center;
+        }
+
+        .bgc-transparent-#{$bp} {
+            background-color: transparent;
+        }
+
+    }
+}
+
+@each $key, $colour in $colours {
+
+    .bgc-#{$key} {
+        background-color: $colour;
+
+        &-h:hover {
+            background-color: $colour;
+        }
+    }
+
+    @for $i from 1 through 10 {
+        .bgc-#{$key}-#{$i} {
+            background-color: rgba($colour, ($i / 10));
+
+            &-h:hover {
+                background-color: $colour;
+            }
+        }
+    }
+
+    @each $bp, $size in $breakpoints {
+        @media (min-width: $size) {
+
+            .bgc-#{$key}-#{$bp} {
+                background-color: $colour;
+
+                &-h:hover {
+                    background-color: $colour;
+                }
+            }
+
+            @for $i from 1 through 10 {
+                .bgc-#{$key}-#{$i}-#{$bp} {
+                    background-color: rgba($colour, ($i / 10));
+
+                    &-h:hover {
+                        background-color: $colour;
+                    }
+                }
+            }
+
+        }
+    }
+
+}
